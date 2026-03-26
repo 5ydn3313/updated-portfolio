@@ -1,0 +1,302 @@
+body{
+    display:flex;
+    background: white;
+    /* background:rgb(255, 200, 255); */
+    flex-direction:column;
+    cursor:url(../assets/ACTUAL_MOUSE@300x.png), auto;
+    margin:3em 2em;
+    /* background:violet; */
+}
+
+.nav{
+    display:flex;
+    margin:0 60px;
+}
+
+.nav-button{
+    display:none;
+}
+
+.primary-navigation ul{
+    /* border:2px solid red; */
+    padding:0;
+    display:flex;
+    flex-direction: row;
+    gap:var(--gap,2.5rem); /* --gap is the custom property and needs to be defined  */
+    align-items:center;
+    justify-content:flex-end;
+    margin:20px 40px;
+}
+
+.primary-navigation li, .primary-navigation a{
+    list-style: none;
+    text-decoration: none;
+    font-family:Epilogue, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color:black;
+    padding:none;
+    /* border:2px solid red; */
+}
+
+.primary-navigation a:hover, li:hover{
+    text-decoration: underline;
+    color:#9e1f63;
+}
+
+#home{
+    margin-right:auto;
+    margin-right:auto;
+    fill: #9e1f63;
+    stroke: #7f47dd;
+    stroke-miterlimit: 10;
+    stroke-width: 18px;
+}
+
+.linkedin-logo:hover{
+    fill:#9e1f63;
+}
+
+#about a{
+    text-decoration: underline;
+    color:#9e1f63;
+}
+
+
+.content-wrapper{
+    margin: 2em 3em;
+    /* border: 2px solid #7f47dd; */
+    display:flex;
+    /* gap:3em; */
+}
+
+.intro-wrapper{
+    /* border:2px solid #1f639e; */
+    align-self:flex-start;
+    margin: 0;
+}
+
+.pixelated{
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size:1.25em;
+    color:#7f47dd;
+}
+
+h1{
+    font-family:Epilogue, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color:black;
+    font-size:5em;
+    padding:0;
+    margin:0 0 50px;
+    line-height:1em;
+    /* border:2px solid orange; */
+}
+
+p{
+    font-family:Epilogue, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color:black;
+    font-size:1em;
+    padding:0;
+    max-width: 70ch;
+    min-width:20ch;
+    height:auto;
+    line-height:1.5em;
+    text-wrap:pretty;
+}
+
+/* -----------------------------------------IMAGE----------------------------------- */
+
+
+.image-wrapper{
+    max-width:400px;
+    height:auto;
+    /* margin: 0  0 1em 0; */
+    margin-left:auto;
+    /* border: 2px solid violet; */
+}
+
+.image-wrapper{
+    img{
+        /* max-inline-size:100%;
+        aspect-ratio:3/2; */
+        /* aspect-ratio: 3/2; */
+        object-fit:cover;
+        border-radius:2em;
+        border:3px solid black;
+        max-inline-size:100%;
+        height:auto;
+    }
+}
+  
+
+
+@media(max-width:1100px){
+    .content-wrapper{
+        flex-direction:column;
+    }
+
+    .image-wrapper{
+        /* align-self:flex-start; */
+        /* align-self:flex-end; */
+        margin:1em 0 0 0;
+    }
+/* 
+    .intro-wrapper{
+        align-self:flex-end;
+    }
+} */
+
+}
+
+@media (max-width:35em){
+
+   
+    .intro{
+        flex-direction:column;
+    }
+
+    .primary-navigation{
+        position:fixed;
+        z-index:1000;
+        inset: 0 0 0 30%;
+        background:rgb(176, 40, 156);
+        transform: translateX(100%);
+    }
+
+    .primary-navigation ul{
+        flex-direction:column;
+        margin:100px 0;
+        --gap:2em;
+    }
+
+    .primary-navigation li, .primary-navigation a{
+        margin:0;
+        font-size:1.5rem;
+        color:rgb(255, 200, 255);
+    }
+
+
+    .linkedin-logo{
+        fill:rgb(255, 200, 255);
+    }
+
+    .linkedin-logo:hover{
+        fill:white;
+    }
+
+    #about a{
+        text-decoration: underline;
+        color:rgb(255, 200, 255);
+    }
+
+    #work a:hover{
+        text-decoration: underline;
+        color:white;
+    }
+
+    #home{
+        margin:0;
+        fill:rgb(255, 200, 255);
+    }
+
+    #home:hover{
+        fill:white;
+    }
+
+    .primary-navigation a:hover, li:hover{
+        text-decoration: underline;
+        color:white;
+    }
+
+    .primary-navigation.open{
+        transform: translateX(0);
+    }
+
+    .primary-navigation.open{
+        transform: translateX(0);
+    }
+
+    .mobile-nav-toggle{
+        display:block;
+        position:absolute;
+        z-index:9999;
+        background:teal;
+        width:1em;
+        aspect-ratio:1;
+        top:2rem;
+        right:2rem;
+    }
+
+    .nav-button {
+        display: block;
+        margin-left:auto;
+        position:absolute;
+        z-index:9999;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        right:2em;
+    } 
+
+    .hamburger{
+        fill:#9e1f63;
+        transition: transform 0.3s ease;
+        transform-origin: center;
+    }
+    
+  
+    .first, .middle, .bottom {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform-origin: center; /* Set transform origin to center for proper rotation */
+    }
+    
+    /* Initial state of the hamburger */
+    .first, .bottom {
+        transition: transform 0.3s ease;
+    }
+    
+    .middle {
+        transition: opacity 0.3s ease;
+    }
+    
+    /* When menu is expanded */
+    .nav-button[aria-expanded="true"] .first {
+        transform: translateY(15px) rotate(45deg);
+        fill:white;
+    }
+    
+    .nav-button[aria-expanded="true"] .bottom {
+        transform: translateY(-15px) rotate(-45deg);
+        fill:white;
+    }
+    
+    .nav-button[aria-expanded="true"] .middle {
+        opacity: 0;
+        fill:white;
+    }
+
+    .content-wrapper{
+        margin:2em 0.5em;
+    }
+
+    h1{
+        font-size:2.5em;
+    }
+
+    .pixelated{
+        font-size:1.5em;
+    }
+
+}
+ 
