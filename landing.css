@@ -1,0 +1,397 @@
+body{
+    display:flex;
+    margin:40px;
+    background: white;
+    /* background:rgb(255, 200, 255); */
+    flex-direction:column;
+    height:100vh;
+}
+
+.nav{
+    display:flex;
+    margin:0 60px;
+}
+
+.nav-button{
+    display:none;
+}
+
+.primary-navigation ul{
+    padding:0;
+    display:flex;
+    flex-direction: row;
+    gap:var(--gap,2.5rem); /* --gap is the custom property and needs to be defined  */
+    align-items:center;
+    justify-content:flex-end;
+    margin:20px 40px;
+}
+
+.primary-navigation li, .primary-navigation a{
+    list-style: none;
+    text-decoration: none;
+    font-family:Epilogue, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color:black;
+    padding:none;
+}
+
+.primary-navigation a:hover, li:hover{
+    text-decoration: underline;
+    color:#9e1f63;
+}
+
+
+.linkedin-logo:hover{
+    fill:#9e1f63;
+}
+
+/* -------------VOLUME------------ */
+#volume{
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    position:relative; /* each helps lock the button dimension to prevent the dimension shifting/resizing */
+    width:40px;
+    height:40px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}
+
+#volumeOn{
+    display:none;
+}
+
+#volume.muted #volumeOn {
+    display: none;
+  }
+  
+#volume.muted #volumeOff {
+    display: block;
+}
+
+/* When NOT muted */
+#volume:not(.muted) #volumeOn {
+    display: block;
+  }
+  
+  #volume:not(.muted) #volumeOff {
+    display: none;
+  }
+
+  #volume:hover #volumeOn, #volume:hover #volumeOff {
+    fill:#9e1f63;
+  }
+
+.content-wrapper{
+    margin-top:auto;
+    margin-bottom:10vh;
+}
+
+
+.hero-wrapper{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+.first-wrapper{
+    display:flex; 
+    flex-direction:column;
+    /* background:violet; */
+    width: calc(70% - 24px);
+}
+    
+.first-name-wrapper{
+    height:14svw;
+    /* background:teal; */
+} 
+
+.second-wrapper{
+    display:flex; 
+    flex-direction:column;
+    /* background:orange; */
+}
+
+.last-name-wrapper{
+    height:19svw;
+    /* background:orange; */
+}
+
+.interactive-first-name{
+    display:flex; 
+    flex-wrap:wrap;
+    height:100%; 
+}
+
+.interactive-last-name{
+    display:flex; 
+    flex-wrap:wrap;
+    height:100%;
+}
+
+
+.letter{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+#letter-s, #letter-y, #letter-d, #letter-n, #letter-e{
+    width:17.33%;
+}
+
+
+
+#second-y{
+    width:13.33333%;
+}
+
+#letter-s div,#letter-y div ,#letter-d div,#letter-n div, #letter-e div{
+ width:16.666667%;
+ height:12.5%;
+}
+
+
+#second-y div{
+    width:20%;
+    height:12.5%;
+}
+
+#gap{
+    width:1%;
+}
+
+#letter-p{
+    width:10%;
+}
+
+#last-name-e{
+    width:10%;
+}
+
+#last-name-n{
+    width:10%;
+}
+
+#letter-i{
+    width:2%;
+}
+
+#letter-g{
+    width:10%;
+}
+
+#letter-t{
+   width:10%;
+}
+
+#letter-o{
+    width:10%;
+}
+
+#letter-p div{
+    width:20%;
+    height:9.0909090%;
+}
+
+#last-name-e div,#last-name-n div,#letter-t div,#letter-o div{
+    width:20%;
+    height:9.0909090%;
+}
+
+#letter-g div{
+    width:20%;
+    height:9.0909090%;
+}
+#fourth-n{
+    width:10%;
+}
+
+#fourth-n div{
+    width:20%;
+    height:9.0909090%;
+}
+
+#letter-i div{
+    width:100%;
+    height:9.0909090%;
+}
+
+.fill{
+    background:black;
+    /* background:gray; */
+}
+
+.blank{
+    background:transparent;
+}
+
+
+.hover{
+    background:#9e1f63;
+    transition:ease 0.3s;
+}
+
+
+.primary-navigation li:hover{
+    /* background:url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");*/
+    /* background-image: url('hover-border.png'); */
+    text-decoration: underline;
+} 
+
+
+.rotate {
+    animation: rotation 2s infinite linear;
+    /* animation : shapes 4s infinite linear; */
+  }
+
+.shape {
+    animation: shapes 4s infinite linear;
+}
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } 
+
+
+@keyframes shapes {
+    0% {
+        border-radius: 0;
+    }
+    /* 25% {
+        border-radius: 50px 0 0 50px;
+    } */
+    50% {
+        border-radius: 50px;
+    }
+    75% {
+        border-radius: 50px 50px;
+    }
+    100% {
+        border-radius: 0;
+    }
+}
+
+
+/*-------------------------------------------------- MEDIA QUERIES------------------------------------------------- */
+
+@media (max-width:35em){
+
+    
+    .primary-navigation{
+        position:fixed;
+        z-index:1000;
+        inset: 0 0 0 30%;
+        background:rgb(176, 40, 156);
+        transform: translateX(100%);
+    }
+
+    .primary-navigation ul{
+        flex-direction:column;
+        margin:100px 0;
+        --gap:2em;
+
+    }
+    .primary-navigation li, .primary-navigation a{
+        margin:0;
+        font-size:1.5rem;
+        color:rgb(255, 200, 255);
+    }
+
+    .primary-navigation.open{
+        transform: translateX(0);
+    }
+
+
+    #volume{
+        display:none;
+    }
+
+
+.linkedin-logo{
+    fill:rgb(255, 200, 255);
+}
+
+.linkedin-logo:hover{
+    fill:white;
+}
+
+.primary-navigation a:hover, li:hover{
+    text-decoration: underline;
+    color:white;
+}
+
+
+    .mobile-nav-toggle{
+        display:block;
+        position:absolute;
+        z-index:9999;
+        background:teal;
+        width:1em;
+        aspect-ratio:1;
+        top:2rem;
+        right:2rem;
+    }
+
+    .nav-button {
+        display: block;
+        margin-left:auto;
+        position:absolute;
+        z-index:9999;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        right:2em;
+    } 
+
+    .hamburger{
+        fill:#9e1f63;
+        /* fill:black; */
+        transition: transform 0.3s ease;
+        transform-origin: center;
+        /* padding-right:  1.5em; */
+
+        /* z-index:100; */
+    }
+    
+  
+    .first, .middle, .bottom {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform-origin: center; /* Set transform origin to center for proper rotation */
+    }
+    
+    /* Initial state of the hamburger */
+    .first, .bottom {
+        transition: transform 0.3s ease;
+    }
+    
+    .middle {
+        transition: opacity 0.3s ease;
+    }
+    
+    /* When menu is expanded */
+    .nav-button[aria-expanded="true"] .first {
+        transform: translateY(15px) rotate(45deg);
+        fill:white;
+    }
+    
+    .nav-button[aria-expanded="true"] .bottom {
+        transform: translateY(-15px) rotate(-45deg);
+        fill:white;
+    }
+    
+    .nav-button[aria-expanded="true"] .middle {
+        opacity: 0;
+        fill:white;
+    }
+}
+ 
