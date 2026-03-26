@@ -1,8 +1,9 @@
 body{
-    display:flex;
+    display:block;
+    /* display:flex; */
     background: white;
     /* background:powderblue; */
-    flex-direction:column;
+    /* flex-direction:column; */
     /* margin:3em ; */
     /* align-items:center; */
     /* overflow:hidden; */
