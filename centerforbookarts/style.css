@@ -1,5 +1,6 @@
 body{
     display:block;
+    margin:auto;
     /* display:flex; */
     background: white;
     /* background:powderblue; */
