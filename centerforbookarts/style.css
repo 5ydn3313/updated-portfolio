@@ -5,6 +5,7 @@ body{
     flex-direction:column;
     /* margin:3em ; */
     /* align-items:center; */
+    overflow:hidden;
 }
 
 .nav{
