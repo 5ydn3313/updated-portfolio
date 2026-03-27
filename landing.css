@@ -310,10 +310,14 @@ body{
         transform: translateX(0);
     }
 
+  
+ #volume #volumeOn, #volume #volumeOff {
+     fill:rgb(255, 200, 255);
+   }
 
-    #volume{
-        display:none;
-    }
+   #volume:hover #volumeOn, #volume:hover #volumeOff {
+    fill:white;
+  }
 
 
 .linkedin-logo{
