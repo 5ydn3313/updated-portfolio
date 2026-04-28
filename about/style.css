@@ -1,11 +1,9 @@
 body{
     display:flex;
     background: white;
-    /* background:rgb(255, 200, 255); */
     flex-direction:column;
     cursor:url(../assets/ACTUAL_MOUSE@300x.png), auto;
     margin:3em 2em;
-    /* background:violet; */
 }
 
 .nav{
@@ -66,13 +64,12 @@ body{
 
 .content-wrapper{
     margin: 2em 3em;
-    /* border: 2px solid #7f47dd; */
-    display:flex;
-    /* gap:3em; */
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    gap:4em;
 }
 
 .intro-wrapper{
-    /* border:2px solid #1f639e; */
     align-self:flex-start;
     margin: 0;
 }
@@ -107,8 +104,7 @@ p{
     color:black;
     font-size:1em;
     padding:0;
-    max-width: 70ch;
-    min-width:20ch;
+    max-width: 60ch;
     height:auto;
     line-height:1.5em;
     text-wrap:pretty;
@@ -118,18 +114,12 @@ p{
 
 
 .image-wrapper{
-    max-width:400px;
+    min-width:400px;
     height:auto;
-    /* margin: 0  0 1em 0; */
-    margin-left:auto;
-    /* border: 2px solid violet; */
 }
 
 .image-wrapper{
     img{
-        /* max-inline-size:100%;
-        aspect-ratio:3/2; */
-        /* aspect-ratio: 3/2; */
         object-fit:cover;
         border-radius:2em;
         border:3px solid black;
@@ -139,31 +129,33 @@ p{
 }
   
 
-
-@media(max-width:1100px){
+@media(max-width:1000px){
     .content-wrapper{
-        flex-direction:column;
+        grid-template-columns: 1fr;
     }
 
-    .image-wrapper{
-        /* align-self:flex-start; */
-        /* align-self:flex-end; */
-        margin:1em 0 0 0;
-    }
-/* 
-    .intro-wrapper{
-        align-self:flex-end;
-    }
-} */
+
+.image-wrapper{
+   min-width:200px;
+    height:auto;
+}
+
+.content-wrapper{
+    gap:2em;
+}
+
 
 }
 
-@media (max-width:35em){
 
-   
+@media (max-width:35em){
     .intro{
         flex-direction:column;
     }
+
+    .content-wrapper{
+        margin:2em 1em;
+    }    
 
     .primary-navigation{
         position:fixed;
@@ -286,9 +278,9 @@ p{
         fill:white;
     }
 
-    .content-wrapper{
+    /* .content-wrapper{
         margin:2em 0.5em;
-    }
+    } */
 
     h1{
         font-size:2.5em;
@@ -299,4 +291,8 @@ p{
     }
 
 }
+ 
+ 
+    
+
  
