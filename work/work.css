@@ -1,8 +1,6 @@
 body{
     display:flex;
-    /* margin:40px; */
     background: white;
-    /* background:rgb(255, 200, 255); */
     flex-direction:column;
     height:100vh;
     cursor:url(../assets/ACTUAL_MOUSE@300x.png), auto;
@@ -19,7 +17,6 @@ body{
 }
 
 .primary-navigation ul{
-    /* border:2px solid red; */
     padding:0;
     display:flex;
     flex-direction: row;
@@ -38,7 +35,6 @@ body{
     font-style: normal;
     color:black;
     padding:none;
-    /* border:2px solid red; */
 }
 
 .primary-navigation a:hover, li:hover{
@@ -68,22 +64,25 @@ body{
     animation: rotation 2s infinite linear;
 }
 
-
-
-.intro{
+.content-wrapper{
     display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:4.75em;
-    padding:1em 2.5em;
-    margin-bottom:2em;
+    flex-direction:column;
+    gap:2em;
+    padding: 0 2em 7em 2em;
 }
 
+.intro-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:4em;
+}
 
 .image-container{
     max-width:700px;
     height:auto;
-    align-self:flex-start;
+    padding:0;
+    margin:0;
+    max-inline-size:100%;
 }
 .image-container img{
     max-inline-size:100%;
@@ -92,7 +91,7 @@ body{
 }
 
 .text-wrapper{
- padding:0;
+ padding:40px 0 0 0;
  max-inline-size:100%;
 }
 
@@ -132,9 +131,6 @@ p{
     grid-template-columns: 
           repeat(var(--column-count), 1fr); /*1 fraction */
     gap: var(--gap);
-    /* margin: 0 3em 0; */
-    padding-bottom:7em;
-    /* background:powderblue; */
 }
 
 .project-gallery a{
@@ -162,7 +158,6 @@ p{
 
 figure{
    margin:0;
-   /* border: 2px solid red; */
 }
 
 
@@ -189,7 +184,6 @@ figure{
     color:gray;
     padding:auto;
     margin:auto;
-    /* border: 2px solid red; */
 }
 
 #TW-type{
@@ -219,31 +213,47 @@ figure{
         font-size:1.125rem;
         line-height:1.75rem;
     }
+
+    p{
+        font-size: 1rem;
+    }
 }
 
 @media (max-width:900px){
 
+    .content-wrapper{
+        padding:0;
+    }
+
+    .intro-grid{
+        grid-template-columns: 1fr;
+        gap:1em;
+        padding: 0 1em 0 1em;
+    }
+    
+    .text-wrapper{
+        padding:0 1em;
+    }
+
     .project-gallery{
         --column-count:1;
         --gap:1em;
+        padding:2em;
     }   
 
  .image-container{
     padding:0 3px;
     margin:0;
-    /* border:2px solid navy; */
  }
 
 
 }
 
 @media (max-width:35em){
-
-   
-    .intro{
-        flex-direction:column;
-        /* background:violet;    */
+    body{
+        display:block;
     }
+
 
     .primary-navigation{
         position:fixed;
@@ -379,26 +389,10 @@ figure{
         padding-left:10px;
         margin:0;
     }
-/* 
-    .intro{
-        margin: 0 6em;
-    }
-     .text-wrapper{
-        padding:0 1.5em;
-        margin:0;
-    }
-
-    .image-container{
-        max-width:100px;
-        align-self:flex-start;
-    }
-    .image-container img{
-        max-inline-size: 100%;
-        height:auto;
-        align-self:flex-start; 
-    }*/
 
 }
 
+
+ 
 
  
