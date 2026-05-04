@@ -393,7 +393,6 @@ figcaption{
     grid-template-columns:repeat(4,1fr);
 }
 
-
 .section-two-wrapper{
     display:grid;
     gap:1em;
@@ -411,7 +410,6 @@ figcaption{
     width:100%;
 }
 
-
 .zine-image-wrapper{
     img{
         aspect-ratio:1/1;
@@ -427,7 +425,8 @@ figcaption{
 
 #crossword{
     display:block;
-    max-width:700px;
+    /* max-width:700px; */
+    max-inline-width:100%;
     height:auto;
     padding:0;
     margin:0;
