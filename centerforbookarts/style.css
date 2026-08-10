@@ -258,7 +258,7 @@ figcaption{
 } 
 
 #video-container{
-    img{
+    video{
     border-radius:2em;
     border:3px solid black;
     max-inline-size:100%;
@@ -462,7 +462,7 @@ figcaption{
 } 
 
 #zine-video-container{
-    video{
+    img{
     border-radius:2em;
     border:3px solid black;
     max-inline-size:100%;
