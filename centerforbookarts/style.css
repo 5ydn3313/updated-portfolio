@@ -264,7 +264,7 @@ figcaption{
     max-inline-size:100%;
     height:auto;
     width:100%;
-   } 
+    } 
 }
 
 #candid-photo{
@@ -393,6 +393,7 @@ figcaption{
     grid-template-columns:repeat(4,1fr);
 }
 
+
 .section-two-wrapper{
     display:grid;
     gap:1em;
@@ -410,6 +411,7 @@ figcaption{
     width:100%;
 }
 
+
 .zine-image-wrapper{
     img{
         aspect-ratio:1/1;
@@ -425,8 +427,7 @@ figcaption{
 
 #crossword{
     display:block;
-    /* max-width:700px; */
-    max-inline-width:100%;
+    max-width:700px;
     height:auto;
     padding:0;
     margin:0;
@@ -462,7 +463,7 @@ figcaption{
 } 
 
 #zine-video-container{
-    img{
+    video{
     border-radius:2em;
     border:3px solid black;
     max-inline-size:100%;
@@ -478,7 +479,7 @@ figcaption{
 }
 
 #crossword-video-wrapper{
-    img{
+    video{
         border-radius:1em;
         border:3px solid black;
         max-inline-size:100%;
