@@ -122,7 +122,8 @@
                 <div class = "media-wrapper">
                     <div id="video-container">
                         <figure>
-                            <video controls muted class="candid-video" width="50%"; autoplay loop controls><source src = "assets/videos/IMG_0827.MOV" type="video/mp4"> </video> 
+                            // <video controls muted class="candid-video" width="50%"; autoplay loop controls><source src = "assets/videos/IMG_0827.MOV" type="video/mp4"> </video> 
+                            <img src = "">
                         </figure>
                     </div>  
                     <div class = "catalogue-description" id = "event-description"> 
